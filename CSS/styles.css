@@ -1,0 +1,753 @@
+/* 
+Author: Charles Fache
+File Name: styles.css
+Date: 11/16/2026
+*/
+
+/* 
+Use Cobalt Black #010102
+and Lavender Violet #AD96F1
+Tropical Lime for accent #58F6B1
+
+Get fonts Bebas Neue for Headers
+and Exo 2 for text
+ */
+
+/* CSS Reset */
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+/* Sets background to cobalt black */
+html, body {
+	background: #010102;
+}
+
+/* Customizes break with nice low profile neon glow */
+hr {
+	border: 0;
+	height: 2px;
+	background: #58F6B1;
+	box-shadow: 0 0 8px #58F6B1;
+}
+
+/* Style rule for header */
+header {
+	padding: 1em 0;
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	background: #010102;
+}
+
+header img {
+	width: 150px;
+	height: auto;
+	margin: 0 auto;
+}
+
+img, video {
+	max-width: 100%;
+	display: block;
+}
+
+/* Style rules for hamburger menu */
+.mobile-nav a {
+	color: #58F6B1;
+	font-family: "Bebas Neue", sans-serif;
+	font-size: 2em;
+	text-align: center;
+	text-decoration: none;
+	padding: 3%;
+	display: block;
+	text-shadow:
+		0 0 4px rgba(88, 246, 177, 0.6),
+		0 0 10px rgba(88, 246, 177, 0.4);
+	transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+.mobile-nav a.menu-icon {
+	display: block;
+	font-size: 2em;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+/* Show mobile class, hide tablet-desktop class and menu-links id*/
+.mobile {
+	display: block;
+	color: #58F6B1;
+	text-align: center;
+	font-size: 3em;
+}
+
+/* Hides desktop rules */
+.tablet-desktop, #menu-links {
+	display: none;
+}
+
+/* Sets headers and mobile p to correct font */
+h1, h2, h3, .mobile p {
+	font-family: "Bebas Neue", sans-serif;
+}
+
+/* Sets rules for subheader that exists on some pages */
+.subheader {
+	color: #58F6B1;
+	font-size: 1.5em;
+	text-align: center;
+}
+
+.subheader p {
+	color: #AD96F1;
+	font-size: 1.1em;
+	font-family: "Exo 2", sans-serif;
+}
+
+.subheader a {
+	color: #58F6B1;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+/* Style Rules for the slider tracks for mobile */
+.slider { 
+	position: relative; 
+	max-width: 720px; 
+	margin: 0 auto 2rem; 
+}
+
+/* Displays a easy to navigate 'carosel' of images */
+.slider__track {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  border-radius: 8px;
+}
+.slider__track::-webkit-scrollbar { 
+	display: none; 
+}
+ 
+/* Each link fills the full width, so exactly one slide is visible at a time */
+.slider__track a {
+  flex: 0 0 100%;
+  display: block;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.slider__track img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: contain;
+  user-select: none;
+}
+
+/* Styleizes buttons for extra functionality */
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.slider__btn:hover { 
+	background: rgba(0, 0, 0, 0.85); 
+}
+
+.slider__btn:focus-visible { 
+	outline: 3px solid #58F6B1; 
+	outline-offset: 2px; 
+}
+
+.slider__btn--prev { 
+	left: 8px; 
+}
+
+.slider__btn--next { 
+	right: 8px; 
+}
+
+/* Style rules for the about page */
+.about {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.about h1 {
+	color: #58F6B1;
+	font-size: 3.5em;
+	text-align: center;
+	margin: 0;
+}
+
+.about-tagline {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.2em;
+	text-align: center;
+	margin: 0 0 1.5em;
+}
+
+.about-block {
+	display: flow-root;
+	margin-bottom: 2em;
+}
+
+.about-block p {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.15em;
+	line-height: 1.6;
+	margin: 0 0 1em;
+}
+
+.about-block strong {
+	color: #58F6B1;
+}
+
+/* Style rules for self portrait on about page */
+.about-photo {
+	width: 70%;
+	max-width: 260px;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
+	border-radius: 50%;
+	border: 2px solid #AD96F1;
+	margin: 0 auto 1em;
+}
+
+/* Styles rules for other photos on about page */
+.about-photo--rect {
+	max-width: 320px;
+	aspect-ratio: 4 / 3;
+	border-radius: 8px;
+}
+
+/* Style rules for the AI statement page */
+.statement {
+	max-width: 65ch;
+	margin: 0 auto;
+	padding: 1em;
+	text-align: center;
+}
+
+.statement h1 {
+	color: #58F6B1;
+	font-size: 3.5em;
+	margin: 0 0 0.5em;
+}
+
+.statement p {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.15em;
+	line-height: 1.7;
+	margin: 0 0 1em;
+}
+
+/* Style rules for the resume page */
+.resume {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.resume h1 {
+	color: #58F6B1;
+	font-size: 3.5em;
+	text-align: center;
+	margin: 0 0 0.5em;
+}
+
+.resume p {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.2em;
+	text-align: center;
+	line-height: 1.5;
+	margin: 0 0 1em;
+}
+
+.resume p a {
+	color: #58F6B1;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.resume p a:hover, .resume p a:focus-visible {
+	color: #ffffff;
+	text-shadow:
+		0 0 4px #58F6B1,
+		0 0 12px #58F6B1;
+}
+
+/* Resume preview image, also links to the PDF */
+.resume-preview {
+	display: block;
+	max-width: 450px;
+	margin: 1.5em auto 0;
+	border: 2px solid #AD96F1;
+	border-radius: 8px;
+	overflow: hidden;
+	transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.resume-preview:hover, .resume-preview:focus-visible {
+	border-color: #58F6B1;
+	box-shadow:
+		0 0 4px #58F6B1,
+		0 0 12px rgba(88, 246, 177, 0.5);
+}
+
+/* Style rules for project pages 
+	not to be confused with the project grid in the tablet query
+*/
+.project-page {
+	max-width: 1000px;
+	margin: 0 auto;
+	padding: 1em;
+}
+
+.project-header {
+	text-align: center;
+	margin-bottom: 2em;
+}
+
+.project-header h1 {
+	color: #58F6B1;
+	font-size: 3.5em;
+	margin: 0;
+}
+
+.project-subtitle {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.4em;
+	margin: 0.25em 0 1em;
+}
+
+.project-meta {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 0.95em;
+	line-height: 1.4;
+	margin: 0;
+}
+
+.project-meta strong {
+	display: block;
+	color: #58F6B1;
+}
+
+.project-summary {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+	margin-bottom: 2em;
+}
+
+.project-image {
+	width: 100%;
+	height: auto;
+	border-radius: 8px;
+	border: 2px solid #AD96F1;
+}
+
+.project-summary h2, .project-section h2 {
+	color: #58F6B1;
+	font-size: 2.5em;
+	margin: 0 0 0.3em;
+}
+
+.project-facts {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.project-facts li {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.2em;
+	line-height: 1.5;
+	margin-bottom: 0.5em;
+}
+
+.project-facts span {
+	color: #58F6B1;
+	font-weight: 600;
+}
+
+.project-facts a {
+	color: #58F6B1;
+}
+
+.project-section p {
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.15em;
+	line-height: 1.7;
+	max-width: 65ch;
+}
+
+.project-section {
+	margin-bottom: 2.5em;
+}
+
+.project-section ul {
+	list-style: none;
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+.project-section li {
+	position: relative;
+	padding-left: 1.4em;
+	margin-bottom: 0.5em;
+	color: #AD96F1;
+	font-family: "Exo 2", sans-serif;
+	font-size: 1.15em;
+	line-height: 1.5;
+}
+
+/* lime bullet to match accent color */
+.project-section li::before {
+	content: "\2022";
+	position: absolute;
+	left: 0.3em;
+	color: #58F6B1;
+}
+
+.project-section h3 {
+	color: #AD96F1;
+	font-size: 1.8em;
+	margin: 0 0 0.75em;
+}
+
+.split-body {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5em;
+}
+
+.project-media {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+/* Style rules for the media on project pages */
+.project-media img, .project-media video {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	background: #010102;
+	border-radius: 8px;
+	border: 2px solid #AD96F1;
+}
+
+/* Wrapper for iframes (for youtube links) */
+.media-frame {
+	aspect-ratio: 16 / 9;
+}
+
+.media-frame iframe {
+	width: 100%;
+	height: 100%;
+	border: 2px solid #AD96F1;
+	border-radius: 8px;
+}
+
+/* Style rules itchio widget at the bottom of the project page */
+.itch-widget {
+	max-width: 1080px;
+}
+
+.itch-widget iframe {
+	display: block;
+	width: 100%;
+	height: 175px;
+	border: 0;
+}
+
+/* Style rules for the footer and social links */
+footer {
+	color: #58F6B1;
+	font-family: "Exo 2", sans-serif;
+	text-align: center;
+	font-style: italic;
+	padding: 1.5em 1em;
+}
+
+.social-links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 0.5em;
+	list-style: none;
+	margin: 0 0 1em;
+	padding: 0;
+}
+
+.social-links a {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 44px;
+	height: 44px;
+	color: #58F6B1;
+	font-size: 1.8em;
+	text-decoration: none;
+	text-shadow:
+		0 0 4px rgba(88, 246, 177, 0.6),
+		0 0 10px rgba(88, 246, 177, 0.4);
+	transition: text-shadow 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for social links */
+.social-links a:hover,
+.social-links a:focus-visible {
+	color: #ffffff;
+	text-shadow:
+		0 0 4px #58F6B1,
+		0 0 12px #58F6B1,
+		0 0 24px #58F6B1;
+}
+
+/* Media Query for Tablet ViewPort */
+@media screen and (min-width: 630px), print {
+	
+	/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+	.tablet-desktop {
+		display: block;
+	}
+	
+	.mobile, .mobile-nav {
+		display: none;
+	}
+	
+	/* Adjusts header to take advantage of extra width */
+	header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 0.5em 2%;
+	}
+	
+	header img {
+		width: 120px;
+		height: auto;
+		margin: 0;
+		padding: 0;
+	}
+	
+	nav ul {
+		list-style-type: none;
+		text-align: center;
+		font-size: 1.5em;
+		font-family: "Bebas Neue", sans-serif;
+		
+	}
+	
+	nav li {
+		display: inline-block;
+	}
+	
+	nav li a {
+		display: block;
+		color: #58F6B1;
+		text-decoration: none;
+		padding: 0.1em 0.75em;
+		border-right: 1px solid #AD96F1;
+		border-width: 3px;
+		text-shadow:
+			0 0 4px rgba(88, 246, 177, 0.6),
+			0 0 10px rgba(88, 246, 177, 0.4);
+		transition: text-shadow 0.3s ease, color 0.3s ease;
+	}
+	
+	nav li:last-child a{
+		border-right: none;
+	}
+	
+	/* Project grid on the index page
+		not to be confused with the attributes on the actual project page
+	*/
+	.project-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 16px;
+		padding: 16px;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+
+	.project {
+		position: relative;
+		display: block;
+		overflow: hidden;
+		border-radius: 8px;
+		border: 2px solid transparent;
+		text-decoration: none;
+		transition: box-shadow 0.3s ease, border-color 0.3s ease;
+	}
+
+	.project img {
+		width: 100%; 
+		aspect-ratio: 16 / 9;
+		object-fit: cover;                  
+		transition: transform 0.3s ease;
+	}
+
+	/* Title overlay hidden until user hovers */
+	.project-info {
+		position: absolute;
+		inset: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		padding: 1em;
+		background: rgba(1, 1, 2, 0.75);
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	.project-info h3 {
+		margin: 0;
+		color: #58F6B1;
+		font-family: "Bebas Neue", sans-serif;
+		font-size: 2em;
+	}
+
+	.project-info p {
+		margin: 0.25em 0 0;
+		color: #AD96F1;
+		font-family: "Exo 2", sans-serif;
+	}
+
+	.project:hover img, .project:focus-visible img {
+		transform: scale(1.05);
+	}
+	
+	.project:hover, .project:focus-visible {
+		border-color: #58F6B1;
+		box-shadow:
+			0 0 4px #58F6B1,
+			0 0 12px rgba(88, 246, 177, 0.5);
+	}
+
+	.project:hover .project-info, .project:focus-visible .project-info {
+		opacity: 1;
+	}
+	
+	/* Adjusts style rules for about page */
+	.about-photo {
+		float: left;
+		width: 240px;
+		margin: 0 2em 1em 0;
+		shape-outside: circle(50%);
+	}
+
+	.about-photo--rect {
+		width: 320px;
+		shape-outside: none;
+	}
+
+	.about-photo--right {
+		float: right;
+		margin: 0 0 1em 2em;
+	}
+	
+	/* Style rules for the actual project page */
+	.project-summary {
+		flex-direction: row;
+		align-items: center;
+		gap: 3em;
+	}
+
+	.project-image {
+		width: 45%;
+		flex-shrink: 0;
+	}
+
+	.project-summary-text {
+		flex: 1;
+	}
+	
+	.split-body {
+		flex-direction: row;
+		align-items: flex-start;
+		gap: 2.5em;
+	}
+
+	.split-text {
+		flex: 1;
+	}
+
+	.project-media {
+		flex: 0 0 45%;
+	}
+}
+
+/* Media Query for Desktop Viewport*/
+@media screen and (min-width: 1015px), print {
+	
+	/* Desktop Viewport: Style rule for header */
+	header img {
+		width: 150px;
+	}
+	
+	nav {
+		margin-left: auto;
+	}
+	
+	nav ul {
+		font-size: 2em;
+		text-align: right;
+	}
+	
+	nav li a{
+		border: none;
+	}
+	
+	nav li a:hover, nav li a:focus-visible {
+		color: #ffffff;
+		text-shadow:
+			0 0 4px #58F6B1,
+			0 0 12px #58F6B1,
+			0 0 24px #58F6B1;
+	}
+	
+	/* Adds additonal column for project grid */
+	.project-grid {
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
+
+/* Media Query for Large Desktop Viewports */
+@media screen and (min-width: 1921px) {
+	
+	html {
+		width: 1920px;
+		margin: 0 auto;
+	}
+	
+}

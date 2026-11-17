@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<!-- 
+Author: Charles Fache
+File Name: kitchenchaos.html
+Date: 11/16/2026
+-->
+
+<html lang = "en">
+
+<head>
+	<title>Charles Fache | Game Programmer</title>
+	<meta charset = "utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel = "stylesheet" href = "css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<link rel = "shortcut icon" href = "images/favicon.ico">
+	<link rel = "icon" type = "image/png" sizes = "32x32" href = "images/favicon-32x32.png">
+	<link rel = "apple-touch-icon" sizes = "180x180" href = "images/apple-touch-icon.png">
+	<link rel = "icon" sizes = "192x192" href = "images/android-chrome-192x192.png">
+</head>
+
+<body>
+
+	<header>
+	
+		<a href = "index.html"><img src = "images/Main_Logo.png" alt = "Personal Logo for Charles Fache"></a>
+		
+			<!-- Mobile Nav -->
+		<nav class = "mobile-nav">
+			<div id = "menu-links">
+				<a href = "index.html">Projects</a>
+				<a href = "about.html">About Me</a>
+				<a href = "resume.html">Resume</a>
+				<a href = "statement.html">Statement on AI</a>
+			</div>
+			<a class = "menu-icon" onclick = "hamburger()">
+				<div>&#9776;</div>
+			</a>
+		</nav>
+		
+		<!-- Tablet, Desktop Nav -->
+		<nav class = "tablet-desktop">
+			<ul>
+				<li><a href = "index.html">Projects</a></li>
+				<li><a href = "about.html">About Me</a></li>
+				<li><a href = "resume.html">Resume</a></li>
+				<li><a href = "statement.html">Statement on AI</a></li>
+			</ul>
+		</nav>
+	
+	</header>
+		
+	<hr>
+	
+	<main>
+		<article class="project-page">
+		
+			<!-- Neat Header that details my role in project -->
+			<div class="project-header">
+				<h1>Kitchen Chaos</h1>
+				<p class="project-subtitle">Game Programmer - Personal Project</p>
+				<p class="project-meta">
+					<strong>June, 2024</strong>
+					Game Programmer<br>
+				</p>
+			</div>
+			
+			<!-- Brief Summary of Project -->
+			<section class="project-summary">
+				<img class="project-image" src="images/KitchenChaos_Logo.png" alt="Screenshot of the project's key art">
+
+				<div class="project-summary-text">
+					<h2>Summary</h2>
+					<ul class="project-facts">
+						<li><span>Type:</span> Personal Project</li>
+						<li><span>Completed:</span> Unreleased</li>
+						<li><span>Acquirable:</span> No</li>
+						<li><span>My Role:</span> Game Programmer</li>
+						<li><span>Time Frame:</span> 2 months</li>
+					</ul>
+				</div>
+			</section>
+			
+			<!-- This overview should be used on every page -->
+			<section class="project-section">
+				<h2>Overview</h2>
+				<p>This was my first learning experience with game programming. It was a heavily guided processes that taught me about game engines and how to get desired behaviors from the game engine through code.</p>
+			</section>
+			
+			<!-- This section includes images or optionally video -->
+			<section class="project-section project-split">
+				<h2>Project Breakdown</h2>
+				<h3>Recreating the game "Overcooked"</h3>
+
+				<div class="split-body">
+					<div class="split-text">
+						<p>The ultimate end result of this project was to recreate mechanics used in Ghost Town Games title <strong>Overcooked.</strong></p>
+						<p>The project was a simple slice of what Overcooked actually was. In this demo, the player was given one of four recipes, and it was their job to make them in order. Either a salad, plain burger, cheeseburger, or deluxe burger.</p>
+						<p>I learned how to handle a character controller, how to get the character to interact with the environment and event handlers.</p>
+					</div>
+
+					<div class="project-media">
+						<img src="images/KitchenChaos_Tut.png" alt="Tutorial image for kitchen chaos">
+						<img src="images/KitchenChaos.png" alt="Image of project working">
+					</div>
+				</div>
+			</section>
+			
+			<section class="project-section">
+				<h2>Core Gameplay Concept</h2>
+				<p>Players serve food by using:</p>
+				<ul>
+					<li>A stovetop with 3 stages for the burger pattys (uncooked, cooked, burnt)</li>
+					<li>A cutting board to cut cheese, lettuce, and tomatoes.</li>
+					<li>A serving convery that checked the accuracy of the recipe.</li>
+					<li>A trashcan to dispose of recipes that were incorrect or no longer needed.</li>
+				</ul>
+				<p>All together, it created a fast paced demo similar to Ghost Town Games title <strong>Overcooked</strong></p>
+			</section>
+
+			<section class="project-section">
+				<h2>My Role</h2>
+				<p>This was a solo project for a class project. The art and assets were provided to me by my instructor. Work by me included:</p>
+				<ul>
+					<li>Gameplay systems and architecture</li>
+					<li>Performance and optimization</li>
+				</ul>
+			</section>
+			
+			<section class="project-section">
+				<h2>What I would do next time</h2>
+				<p>If I were to revist or expand upon title I would:</p>
+				<ul>
+					<li>Make a few more levels with differing challenges.</li>
+					<li>Add unique mechanics to seperate it from similar titles.</li>
+				</ul>
+			</section>
+
+		</article>
+	
+	</main>
+	
+	<!-- My contact info will be available at the bottom of every page. -->
+	<footer>
+		<ul class="social-links">
+			<li>
+				<a href="https://www.instagram.com/ya_boi__charles/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+					<i class="fa-brands fa-instagram" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://x.com/Charles_Fache" target="_blank" rel="noopener noreferrer" aria-label="X">
+					<i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/BigB02496" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+					<i class="fa-brands fa-github" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="mailto:charleskincaid79@gmail.com" aria-label="Email">
+					<i class="fa-solid fa-envelope" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/charles-fache-236a98363/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+					<i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+
+		<p>Work completely or partly developed by Charles Fache</p>
+	</footer>
+	
+	<script src = "scripts/script.js"></script>
+</body>
+
+</html>

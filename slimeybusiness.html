@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<!-- 
+Author: Charles Fache
+File Name: slimeybusiness.html
+Date: 11/16/2026
+-->
+
+<html lang = "en">
+
+<head>
+	<title>Charles Fache | Game Programmer</title>
+	<meta charset = "utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel = "stylesheet" href = "css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<link rel = "shortcut icon" href = "images/favicon.ico">
+	<link rel = "icon" type = "image/png" sizes = "32x32" href = "images/favicon-32x32.png">
+	<link rel = "apple-touch-icon" sizes = "180x180" href = "images/apple-touch-icon.png">
+	<link rel = "icon" sizes = "192x192" href = "images/android-chrome-192x192.png">
+</head>
+
+<body>
+
+	<header>
+	
+		<a href = "index.html"><img src = "images/Main_Logo.png" alt = "Personal Logo for Charles Fache"></a>
+		
+			<!-- Mobile Nav -->
+		<nav class = "mobile-nav">
+			<div id = "menu-links">
+				<a href = "index.html">Projects</a>
+				<a href = "about.html">About Me</a>
+				<a href = "resume.html">Resume</a>
+				<a href = "statement.html">Statement on AI</a>
+			</div>
+			<a class = "menu-icon" onclick = "hamburger()">
+				<div>&#9776;</div>
+			</a>
+		</nav>
+		
+		<!-- Tablet, Desktop Nav -->
+		<nav class = "tablet-desktop">
+			<ul>
+				<li><a href = "index.html">Projects</a></li>
+				<li><a href = "about.html">About Me</a></li>
+				<li><a href = "resume.html">Resume</a></li>
+				<li><a href = "statement.html">Statement on AI</a></li>
+			</ul>
+		</nav>
+	
+	</header>
+		
+	<hr>
+	
+	<main>
+		<article class="project-page">
+		
+			<!-- Neat Header that details my role in project -->
+			<div class="project-header">
+				<h1>Slimey Business</h1>
+				<p class="project-subtitle">Game Programmer - Personal Project</p>
+				<p class="project-meta">
+					<strong>August, 2024</strong>
+					Game Programmer<br>
+				</p>
+			</div>
+			
+			<!-- Brief Summary of Project -->
+			<section class="project-summary">
+				<img class="project-image" src="images/FlyingSlime_Single.png" alt="Screenshot of the project's main menu">
+
+				<div class="project-summary-text">
+					<h2>Summary</h2>
+					<ul class="project-facts">
+						<li><span>Type:</span> Personal Project</li>
+						<li><span>Completed:</span> Unreleased</li>
+						<li><span>Acquirable:</span> No</li>
+						<li><span>My Role:</span> Game Programmer</li>
+						<li><span>Time Frame:</span> 2 months</li>
+					</ul>
+				</div>
+			</section>
+			
+			<!-- This overview should be used on every page -->
+			<section class="project-section">
+				<h2>Overview</h2>
+				<p>This was my first truly solo project. I aimed to create a wave based first person shooter where the objective was to survive waves of "slime" enemies with increasing difficulty.</p>
+			</section>
+			
+			<!-- This section includes images or optionally video -->
+			<section class="project-section project-split">
+				<h2>Project Breakdown</h2>
+
+				<div class="split-body">
+					<div class="split-text">
+						<p>The player spawned in a confined room with only a door blocking their path. Points were rewarded to the player for succesful shots and eliminations of enemies.</p>
+						<p>The player could spend their points to open doors or buy upgrades.</p>
+						<p>Multiple enemy types would spawn giving a variety of challenge for the player.</p>
+					</div>
+
+					<div class="project-media">
+						<img src="images/DemoGame.png" alt="Image of a level in the demo">
+						<img src="images/FlyingSlime.png" alt="Two flying slimes side by side.">
+					</div>
+				</div>
+			</section>
+			
+			<section class="project-section">
+				<h2>Concepts learned</h2>
+				<p>As a solo project I learned:</p>
+				<ul>
+					<li>How to use the Unity Engines navmesh system to program enemy AI.</li>
+					<li>How to use Unity Engines particle system for weapon and enemy effects.</li>
+					<li>How to overcome the challenges that come with a first person character controller.</li>
+				</ul>
+			</section>
+
+			<section class="project-section">
+				<h2>My Role</h2>
+				<p>I was responsible for the following work:</p>
+				<ul>
+					<li>Gameplay systems and architecture</li>
+					<li>Performance and optimization</li>
+					<li>UI programming</li>
+					<li>Animations</li>
+					<li>Level Design</li>
+				</ul>
+			</section>
+			
+			<section class="project-section">
+				<h2>What I would do next time</h2>
+				<p>If I were to revist or expand upon title I would:</p>
+				<ul>
+					<li>Add a variety of weapons</li>
+					<li>More variation to enemies</li>
+					<li>Improved enemy AI and pathing</li>
+				</ul>
+			</section>
+
+		</article>
+	
+	</main>
+	
+	<!-- My contact info will be available at the bottom of every page. -->
+	<footer>
+		<ul class="social-links">
+			<li>
+				<a href="https://www.instagram.com/ya_boi__charles/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+					<i class="fa-brands fa-instagram" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://x.com/Charles_Fache" target="_blank" rel="noopener noreferrer" aria-label="X">
+					<i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/BigB02496" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+					<i class="fa-brands fa-github" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="mailto:charleskincaid79@gmail.com" aria-label="Email">
+					<i class="fa-solid fa-envelope" aria-hidden="true"></i>
+				</a>
+			</li>
+			<li>
+				<a href="https://www.linkedin.com/in/charles-fache-236a98363/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+					<i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+				</a>
+			</li>
+		</ul>
+
+		<p>Work completely or partly developed by Charles Fache</p>
+	</footer>
+	
+	<script src = "scripts/script.js"></script>
+</body>
+
+</html>
